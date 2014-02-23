@@ -1,7 +1,7 @@
 from setuptools import setup
 
 __name__ = 'globelabs'
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __author__ = 'Jesse Panganiban'
 
 install_requires = ['requests']
