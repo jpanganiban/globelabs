@@ -32,7 +32,7 @@ def login():
 
 @app.route('/redirect_callback')
 def redirect_callback():
-    r = globe.get_access_token("r9UoAgXpCjpjE7UepoLGubqq48U5E5aXuBok79FKbdAnhnzEG4sz5Ao8hBzM9XFrLGg5tLy75btz4Ge6u9M4zph857zBu7AaXGsM9xbGfkrKB9Hgz8jRsj5BpLuX8T7jK9iBpKu5q8XBs7aKMkHyjx85fazaqMs8G7Eeu6R4yehr7GgMu597EBtn4G74tnkMoBFAKA6AhA4EzLsb5d7XhLnkzyFer56Lu6dqdjUEgo5xuAzjarUn7gKnCAqGyrU6")
+    r = globe.get_access_token(request.args.get('code'))
     ac = r['access_token']
     subscriber_number = r['subscriber_number']
     return redirect(url_for('.home'))
